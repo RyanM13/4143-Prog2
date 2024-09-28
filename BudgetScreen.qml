@@ -5,16 +5,22 @@ import QtQuick.Controls 2.15
 Item {
     width: parent.width
     height: parent.height
+    
+    Text {
+            text: "Expense Tracker"
+            font.pixelSize: 60
+            font.weight: Font.Bold
+            anchors.horizontalCenter: parent.horizontalCenter
+            
+            anchors.top: parent.top
+            anchors.topMargin: 150
+            
+        }
 
     Column {
         anchors.centerIn: parent
 
-        Text {
-            text: "Enter your budget:"
-            font.pixelSize: 20
-            font.weight: Font.Bold
-            anchors.horizontalCenter: parent.horizontalCenter
-        }
+        
 
         TextField {
             id: budgetField
@@ -23,14 +29,17 @@ Item {
             width: 200
         }
 
-        Button {
+        
+    }
+    Button {
             text: "Submit"
             anchors.horizontalCenter: parent.horizontalCenter
+            anchors.bottom: parent.bottom
+            anchors.bottomMargin: 60
             onClicked: {
                 // Logic to save budget value (budgetField.text)
                 // Navigate to the next screen
-                stackView.push(Qt.resolvedUrl("NextScreen.qml"))
+                stackView.push(Qt.resolvedUrl("BudgetScreen.qml"))
             }
         }
-    }
 }
