@@ -3,7 +3,7 @@ import QtQuick.Controls 2.15
 
 ApplicationWindow {
     visible: true
-    width: 800
+    width: 600
     height: 600
     title: "Expense Tracker"
 

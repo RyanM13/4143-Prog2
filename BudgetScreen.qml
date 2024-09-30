@@ -19,11 +19,12 @@ Item {
 
     Column {
         anchors.centerIn: parent
+        
 
         
 
         TextField {
-            id: budgetField
+            
             placeholderText: "Enter your budget"
             anchors.horizontalCenter: parent.horizontalCenter
             width: 200
@@ -31,15 +32,36 @@ Item {
 
         
     }
+    
+        
+
+    
+   
     Button {
             text: "Submit"
             anchors.horizontalCenter: parent.horizontalCenter
             anchors.bottom: parent.bottom
-            anchors.bottomMargin: 60
+            anchors.bottomMargin: 70
+            width: 150
+            height: 45 
+            font.pixelSize: 30
+        
+        background: Rectangle {
+            color: "#58FF33"
+            radius: 10  // Rounded corners
+            border.color: "black"
+            border.width: 2
+
+
+        }
+
+         
+            
             onClicked: {
                 // Logic to save budget value (budgetField.text)
                 // Navigate to the next screen
-                stackView.push(Qt.resolvedUrl("BudgetScreen.qml"))
+                stackView.push(Qt.resolvedUrl("BudgetTrack.qml"))
             }
         }
+        
 }
