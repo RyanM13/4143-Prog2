@@ -2,14 +2,14 @@ import QtQuick 2.15
 import QtQuick.Controls 2.15
 
 Item {
-    width: 400
+    width: 450
     height: 600
 
     // TabBar at the top
     TabBar {
         id: bar
         width: parent.width
-        height: 60
+        height: 50 
 
         TabButton {
             id: budgetPageButton
@@ -42,13 +42,16 @@ Item {
 
                 Column{
                     anchors.topMargin: 61
-                    Repeater{
-                        model: 3
+
+                    
+                    
                     
                     TextField{
                         placeholderText: "Enter category"
                         placeholderTextColor: "green"
-                    }
+                        
+                        }
+                    
                     }
 
             }
@@ -78,6 +81,6 @@ Item {
             }
         }
     }
-    }
+    
 
 
